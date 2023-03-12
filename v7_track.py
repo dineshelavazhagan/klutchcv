@@ -405,7 +405,7 @@ def main(source, file_name):
         classes = 32
         zoom_factor=1
         # yolo_weights = "yolov5x.pt"
-        device = "cuda:0"
+        # device = ""
         # tr = Tracker(classes=classes, device=device)
         # source = "IMG_3853_2.mp4"
         # file_name = 'IMG_3853_2.mp4' # inject name
@@ -467,25 +467,20 @@ if __name__ == '__main__':
 #         ball_dets.detect(source)
 #         new_vid = ball_dets.create_new_video(frame_size,zoom_factor,file_name)
 #         print("ehere")
-    source = "IMG_3853_2.mp4"
-    file_name = 'IMG_3853_2.mp4' # inject name
+#  ----------------------- for single file ---------------------
+    # source = "IMG_3853_2.mp4"
+    # file_name = 'IMG_3853_2.mp4' # inject name
 
-    main(source, file_name)
+    # main(source, file_name)
 
 #  ------------------------ uncomment `for bulk --------------------------------------
 
-#         for file_name in os.listdir("../data/raw/FEBRUARY_26.23-20230301T152455Z-001/FEBRUARY_26.23-20230302T041604Z-007//"): 
-#             # file_name = 'IMG_3995.mp4'
-#             if file_name.endswith(".mp4"):
-#               pass
+        for file_name in os.listdir("../data/raw/FEBRUARY_26.23-20230301T152455Z-001/FEBRUARY_26.23-20230302T041604Z-007//"): 
+            # file_name = 'IMG_3995.mp4'
+            if file_name.endswith(".mp4"):
+              pass
 
-#             else:continue
-#             source = "../data/raw/FEBRUARY_26.23-20230301T152455Z-001/FEBRUARY_26.23-20230302T041604Z-007//"+file_name
-#             print(source)
-#             ball_dets = ball_det()
-
-#             # tr.run_tracking_per_frame(source)
-#             frame_size = ball_dets.Suported_resolutions['high']
-#             ball_dets.detect(source)
-#             new_vid = ball_dets.create_new_video(frame_size,zoom_factor,file_name)
-
+            else:continue
+            source = "../data/raw/FEBRUARY_26.23-20230301T152455Z-001/FEBRUARY_26.23-20230302T041604Z-007//"+file_name
+            print(source)
+            main(source, file_name)

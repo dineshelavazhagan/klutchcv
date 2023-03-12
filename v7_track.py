@@ -486,7 +486,7 @@ if __name__ == '__main__':
             print(source)
             file_start_time = time.time()
             main(source, file_name)
-            file_end_time = time.time() - file_end_time
+            file_end_time = time.time() - file_start_time
             print("--------------------------------------------------------------------------------")
             print("--------------------------------------------------------------------------------")
             print("--------------------------------------------------------------------------------")

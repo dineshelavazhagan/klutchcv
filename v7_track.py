@@ -474,7 +474,8 @@ if __name__ == '__main__':
     # main(source, file_name)
 
 #  ------------------------ uncomment `for bulk --------------------------------------
-
+        import time
+        folder_start_time = time.time()
         for file_name in os.listdir("/mnt/disks/ks3/data/proccessed/H2GvColorado/"): 
             # file_name = 'IMG_3995.mp4'
             if file_name.endswith(".mp4"):
@@ -483,4 +484,15 @@ if __name__ == '__main__':
             else:continue
             source = "/mnt/disks/ks3/data/proccessed/H2GvColorado/"+file_name
             print(source)
+            file_start_time = time.time()
             main(source, file_name)
+            file_end_time = time.time() - file_end_time
+            print("--------------------------------------------------------------------------------")
+            print("--------------------------------------------------------------------------------")
+            print("--------------------------------------------------------------------------------")
+            print("---------------------------------",file_end_time,"----------------------------------------------")
+            print("--------------------------------------------------------------------------------")
+            print("--------------------------------------------------------------------------------")
+            print("--------------------------------------------------------------------------------")
+        print("folder end time", time.time() - folder_start_time)
+            

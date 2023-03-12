@@ -475,12 +475,12 @@ if __name__ == '__main__':
 
 #  ------------------------ uncomment `for bulk --------------------------------------
 
-        for file_name in os.listdir("../data/raw/FEBRUARY_26.23-20230301T152455Z-001/FEBRUARY_26.23-20230302T041604Z-007//"): 
+        for file_name in os.listdir("/mnt/disks/ks3/data/proccessed/H2GvColorado/"): 
             # file_name = 'IMG_3995.mp4'
             if file_name.endswith(".mp4"):
               pass
 
             else:continue
-            source = "../data/raw/FEBRUARY_26.23-20230301T152455Z-001/FEBRUARY_26.23-20230302T041604Z-007//"+file_name
+            source = "/mnt/disks/ks3/data/proccessed/H2GvColorado/"+file_name
             print(source)
             main(source, file_name)
